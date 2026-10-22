@@ -3,7 +3,7 @@ public class SiakadFor9 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ;
-
+        int mahasiswalulus = 0, mahasiswatidaklulus = 0;
         double nilai, tertinggi = 0, terendah = 100;
         for (int i =1; i <=10; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + i + ": ");
@@ -14,10 +14,18 @@ public class SiakadFor9 {
             if (nilai < terendah) {
                 terendah = nilai;
             }
+            if (nilai >= 60) {
+                mahasiswalulus++;
+            }
+            else {
+                mahasiswatidaklulus++;
+            }
+
         }
+        
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
-
+        System.out.println("Jumlah mahasiswa yang lulus: " + mahasiswalulus);
+        System.out.println("Jumlah mahasiswa yang tidak lulus: " + mahasiswatidaklulus);
     }
-    
 }
